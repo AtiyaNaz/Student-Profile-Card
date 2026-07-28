@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1 class="main-title">Student Profile Card</h1>
+        <p class="subtitle">Build your interactive profile instantly</p>
+
+        <div class="form-section">
+            <!-- Input Fields -->
+            <div class="input-group">
+                <label for="studentNameInput">Student Name</label>
+                <input type="text" id="studentNameInput" placeholder="e.g., Ali Ahmed">
+                <span id="charCount" class="char-count">Characters: 0</span>
+            </div>
+
+            <div class="input-group">
+                <label for="studentAgeInput">Age</label>
+                <input type="number" id="studentAgeInput" placeholder="e.g., 20" min="1" max="100">
+            </div>
+
+            <div class="input-group">
+                <label for="studentSubjectInput">Favorite Subject</label>
+                <input type="text" id="studentSubjectInput" placeholder="e.g., Computer Science">
+            </div>
+
+            <div class="input-group">
+                <label for="studentColorInput">Favorite Color</label>
+                <input type="text" id="studentColorInput" placeholder="e.g., Blue, #4a90e2, lightgreen">
+            </div>
+
+            <div class="input-group">
+                <label for="profilePictureInput">Profile Picture (Optional)</label>
+                <input type="file" id="profilePictureInput" accept="image/*">
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-group">
+                <button id="createProfileBtn" class="btn primary">Create Profile</button>
+                <button id="changeThemeBtn" class="btn secondary">Change Theme</button>
+                <button id="toggleProfileBtn" class="btn secondary">Hide Profile</button>
+                <button id="resetBtn" class="btn danger">Reset</button>
+            </div>
+        </div>
+
+        <!-- Profile Card - Hidden initially, shows only after Create Profile -->
+        <div id="profileCard" class="profile-card">
+            <div class="card-header">
+                <div class="avatar-wrapper">
+                    <img id="profileAvatar" src="https://ui-avatars.com/api/?name=Student&background=6c5ce7&color=fff&size=100&bold=true" alt="Avatar">
+                </div>
+                <div class="greeting-wrapper">
+                    <p id="greetingText" class="greeting"></p>
+                    <p id="dateText" class="date-text"></p>
+                </div>
+            </div>
+            
+            <div class="card-body">
+                <h2 id="displayName">Student Name</h2>
+                <p class="profile-item"><span class="label">Age:</span> <span id="displayAge">--</span></p>
+                <p class="profile-item"><span class="label">Favorite Subject:</span> <span id="displaySubject">--</span></p>
+                <p class="profile-item"><span class="label">Favorite Color:</span> <span id="displayColor">--</span></p>
+            </div>
+        </div>
+
+        <!-- Hint -->
+        <p class="hint">* Fill form and click Create Profile to see your card</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
